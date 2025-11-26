@@ -29,10 +29,14 @@ st.markdown(
     }
     .block-container { padding: 1rem 2rem; }
     h1,h2,h3 { 
-        color: #d946b0; 
+        color: #d946b0 !important; 
         font-family: 'Comic Sans MS', cursive;
         text-shadow: 2px 2px 4px rgba(255, 182, 217, 0.6);
         font-weight: bold;
+    }
+    h2 {
+        color: #d946b0 !important;
+        font-size: 1.8em !important;
     }
     .footer { color: #d946b0; font-size: 12px; margin-top: 8px; }
     .stCodeBlock { 
@@ -353,7 +357,7 @@ if "prompt" not in st.session_state:
 col1, col2 = st.columns([1, 2])
 
 with col1:
-    st.header("Options 🎀")
+    st.markdown("## Options 🎀")
     person_mode = st.checkbox("Center the prompt around a person 👤", value=False)
     add_mj = st.checkbox("Add random MidJourney --s and --sref ⚙️", value=True)
     add_time = st.checkbox("⏰ Add time element", value=False)
@@ -362,21 +366,21 @@ with col1:
         st.session_state.prompt = make_prompt(person_mode, add_mj_params=add_mj, pure_kawaii_mode=pure_kawaii, add_time=add_time)
     st.markdown("---")
     st.markdown(
-    "Created with 💕 by [@Farah_ai_](https://x.com/Farah_ai_)", unsafe_allow_html=True)
+    "<p style='color: #2d1b3d; font-weight: 600;'>Created with 💕 by <a href='https://x.com/Farah_ai_' style='color: #d946b0; font-weight: 700;'>@Farah_ai_</a></p>", unsafe_allow_html=True)
 
 with col2:
-    st.header("Output 🎨")
+    st.markdown("## Output 🎨")
     if st.session_state.prompt:
-        st.markdown("**Your Kawaii Prompt** _(click the copy icon in the top-right corner):_")
+        st.markdown("<p style='color: #2d1b3d; font-weight: 600;'><strong style='color: #d946b0;'>Your Kawaii Prompt</strong> <em>(click the copy icon in the top-right corner):</em></p>", unsafe_allow_html=True)
         st.code(st.session_state.prompt, language=None)
 
-st.markdown("💡 Tip: Click the copy icon (top right of the prompt box) to copy your prompt!", unsafe_allow_html=True)
+st.markdown("<p style='color: #2d1b3d; font-weight: 600;'>💡 Tip: Click the copy icon (top right of the prompt box) to copy your prompt!</p>", unsafe_allow_html=True)
 st.markdown("---")
 st.markdown(
-    "Use of this generator is free but if you find it useful please consider donating a little; [Donate via Kofi ☕](https://ko-fi.com/farahai)",
+    "<p style='color: #2d1b3d; font-weight: 600;'>Use of this generator is free but if you find it useful please consider donating a little; <a href='https://ko-fi.com/farahai' style='color: #d946b0; font-weight: 700;'>Donate via Kofi ☕</a></p>",
     unsafe_allow_html=True
 )
-st.markdown("*~ Spread the kawaii magic! ~* ✨💖", unsafe_allow_html=True)
+st.markdown("<p style='color: #d946b0; font-weight: 700; font-style: italic; text-align: center;'>~ Spread the kawaii magic! ~ ✨💖</p>", unsafe_allow_html=True)
 
 st.markdown(
     """
