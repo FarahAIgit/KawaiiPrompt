@@ -10,39 +10,42 @@ st.set_page_config(page_title="Kawaii Prompt Generator", layout="wide")
 st.markdown(
     """
     <style>
-    body { background-color: #fff5f8; color: #4a4a4a; font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive; }
+    body { background-color: #fff5f8; color: #2d1b3d; font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive; }
     .stApp { min-height: 100vh; background: linear-gradient(135deg, #fff5f8 0%, #ffe8f0 50%, #f0f8ff 100%); }
-    .stTextArea textarea { background: rgba(255,255,255,0.8); color: #ff69b4; border: 2px solid #ffb6d9; border-radius: 15px; }
+    .stTextArea textarea { background: rgba(255,255,255,0.95); color: #d946b0; border: 2px solid #ffb6d9; border-radius: 15px; }
     .stButton>button { 
-        background: linear-gradient(135deg, #ff9dd9 0%, #ffb6d9 100%); 
+        background: linear-gradient(135deg, #ff69b4 0%, #ff8dc7 100%); 
         color: white; 
         border-radius: 20px; 
         padding: 10px 20px;
-        border: 3px solid #ffd4e8;
+        border: 3px solid #ff69b4;
         font-weight: bold;
-        box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
+        box-shadow: 0 4px 10px rgba(255, 105, 180, 0.4);
+        font-size: 16px;
     }
     .stButton>button:hover {
-        background: linear-gradient(135deg, #ffb6d9 0%, #ffd4e8 100%);
+        background: linear-gradient(135deg, #ff8dc7 0%, #ffa8d9 100%);
         transform: scale(1.05);
     }
     .block-container { padding: 1rem 2rem; }
     h1,h2,h3 { 
-        color: #ff69b4; 
+        color: #d946b0; 
         font-family: 'Comic Sans MS', cursive;
-        text-shadow: 2px 2px 4px rgba(255, 182, 217, 0.5);
+        text-shadow: 2px 2px 4px rgba(255, 182, 217, 0.6);
+        font-weight: bold;
     }
-    .footer { color: #ff9dd9; font-size: 12px; margin-top: 8px; }
+    .footer { color: #d946b0; font-size: 12px; margin-top: 8px; }
     .stCodeBlock { 
-        background: rgba(255, 255, 255, 0.9); 
-        border: 3px solid #ffb6d9;
+        background: rgba(255, 255, 255, 0.95); 
+        border: 3px solid #ff69b4;
         border-radius: 15px;
     }
     .stCodeBlock code { 
         white-space: pre-wrap !important; 
         word-wrap: break-word !important;
         overflow-wrap: break-word !important;
-        color: #ff69b4;
+        color: #d946b0;
+        font-weight: 500;
     }
     .stCodeBlock pre {
         white-space: pre-wrap !important;
@@ -67,7 +70,8 @@ st.markdown(
     }
     .stCheckbox label {
         background-color: transparent !important;
-        color: #ff69b4 !important;
+        color: #2d1b3d !important;
+        font-weight: 500;
     }
     .stCheckbox span {
         background-color: transparent !important;
@@ -87,9 +91,20 @@ st.markdown(
     <style>
     .block-container > div > div > div:first-child h3 {
         text-align: center;
+        color: #d946b0 !important;
     }
     .block-container > div > div > div:first-child p {
         text-align: center;
+        color: #2d1b3d !important;
+        font-weight: 500;
+    }
+    /* Make all paragraph text darker */
+    p, .stMarkdown p {
+        color: #2d1b3d !important;
+    }
+    /* Make markdown text darker */
+    .stMarkdown {
+        color: #2d1b3d !important;
     }
     </style>
     """,
@@ -368,11 +383,11 @@ st.markdown(
     <style>
     .block-container {
         backdrop-filter: blur(6px);
-        background: rgba(255, 255, 255, 0.7);
+        background: rgba(255, 255, 255, 0.85);
         border-radius: 20px;
         padding: 30px;
-        border: 3px solid #ffb6d9;
-        box-shadow: 0 8px 20px rgba(255, 105, 180, 0.2);
+        border: 3px solid #ff69b4;
+        box-shadow: 0 8px 20px rgba(255, 105, 180, 0.3);
     }
     </style>
     """,
